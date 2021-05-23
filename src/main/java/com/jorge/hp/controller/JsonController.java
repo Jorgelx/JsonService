@@ -91,6 +91,5 @@ public class JsonController {
 		logger.info("---   START : date " + date);
 		service.getJson(date);
 			return new ResponseEntity<MetricDTO>(service.metrics(), HttpStatus.OK);
-		}
 	}
 }
