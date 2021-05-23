@@ -50,13 +50,7 @@ public class JsonController {
 	public ResponseEntity<?> getJson(@PathVariable(required = false) String date)
 			throws IllegalArgumentException, IllegalAccessException, JsonProcessingException {
 		logger.info("---   START : date " + date);
-		if (date == null || date.isBlank()) {
-			return new ResponseEntity<Message>(new Message(
-					"Date is empty, please, enter date beetween: 20180131 20180201 (20180202 not's full process,  can't fix 'OK  )"),
-					HttpStatus.NOT_FOUND);
-		} else {
 			return new ResponseEntity<List<Json>>(service.getJson(date), HttpStatus.OK);
-		}
 	}
 
 	/**
@@ -77,13 +71,7 @@ public class JsonController {
 			throws IllegalArgumentException, IllegalAccessException {
 		logger.info("---   START : date " + date);
 		service.getJson(date);
-		if (date == null || date.equals("")) {
-			return new ResponseEntity<Message>(new Message(
-					"Date is empty, please, enter date beetween: 20180131 20180201 (20180202 not's full process,  can't fix 'OK  )"),
-					HttpStatus.NOT_FOUND);
-		} else {
 			return new ResponseEntity<KpiDTO>(service.kpis(), HttpStatus.OK);
-		}
 	}
 
 	/**
@@ -102,11 +90,6 @@ public class JsonController {
 			throws IllegalArgumentException, IllegalAccessException, JsonProcessingException {
 		logger.info("---   START : date " + date);
 		service.getJson(date);
-		if (date == null || date.isBlank()) {
-			return new ResponseEntity<Message>(new Message(
-					"Date is empty, please, enter date beetween: 20180131 20180201 (20180202 not's full process,  can't fix 'OK  )"),
-					HttpStatus.NOT_FOUND);
-		} else {
 			return new ResponseEntity<MetricDTO>(service.metrics(), HttpStatus.OK);
 		}
 	}
