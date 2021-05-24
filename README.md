@@ -25,6 +25,6 @@ You can test this dates:
 
 - 20180131 - OK
 - 20180201 - OK
-- 20180202 (this dates can't read full , you can see 1 error in JSON Response)
+- 20180202 (this dates can't read full)
 
 
