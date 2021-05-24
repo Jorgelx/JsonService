@@ -66,7 +66,7 @@ public class JsonController {
 	 * @throws IllegalArgumentException
 	 * 
 	 */
-	@GetMapping({ "kpis/{date}", "kpi/" })
+	@GetMapping({ "kpis/{date}", "kpis/" })
 	public ResponseEntity<?> kpis(@PathVariable(required = false) String date)
 			throws IllegalArgumentException, IllegalAccessException {
 		logger.info("---   START : date " + date);
@@ -85,7 +85,7 @@ public class JsonController {
 	 *         21/05/2054
 	 * 
 	 */
-	@GetMapping({ "metrics/{date}", "metric/" })
+	@GetMapping({ "metrics/{date}", "metrics/" })
 	public ResponseEntity<?> metric(@PathVariable(required = false) String date)
 			throws IllegalArgumentException, IllegalAccessException, JsonProcessingException {
 		logger.info("---   START : date " + date);
