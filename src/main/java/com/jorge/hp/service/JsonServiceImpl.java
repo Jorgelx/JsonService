@@ -227,7 +227,7 @@ public class JsonServiceImpl implements JsonService{
 		StringBuilder sb = new StringBuilder();
 		List<Country> countries = new ArrayList<Country>();
 		try {
-			URL url = new URL("https://raw.githubusercontent.com/Jorgelx/json/main/PrefixNumbersJson");
+			URL url = new URL("https://raw.githubusercontent.com/Jorgelx/JsonService/master/Countries");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");
